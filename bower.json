@@ -1,0 +1,29 @@
+{
+  "name": "deequal",
+  "description": "Deep equal.",
+  "main": "deequal.js",
+  "support": "deequal.support.js",
+  "deploy": "deequal.deploy.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "deep",
+    "equal",
+    "deequal"
+  ],
+  "homepage": "https://github.com/volkovasystems/deequal",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "kount": "^0.5.0",
+    "loosen": "^0.4.0",
+    "protype": "^0.9.0"
+  }
+}
