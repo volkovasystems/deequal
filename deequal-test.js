@@ -1,5 +1,6 @@
 const deequal = require( "./deequal.js" );
 
+let time = Date.now( );
 console.log( deequal( {
 	"hello": {
 		"world": {
@@ -21,3 +22,5 @@ console.log( deequal( {
 		"weee": false
 	}
 } ) );
+console.log( deequal( undefined, null ) );
+console.log( Date.now( ) - time );

@@ -72,12 +72,17 @@ const deequal = function deequal( source, target ){
 		@end-meta-configuration
 	*/
 
-	if( !protype( source, OBJECT ) ){
-		throw new Error( "invalid source" );
-	}
+	if( !protype( source, OBJECT ) || !protype( target, OBJECT ) ){
+		try{
+			if( protype( source, FUNCTION ) && protype( target, FUNCTION ) ){
+				return source === target || source.toString( ) == target.toString( );
+			}
 
-	if( !protype( target, OBJECT ) ){
-		throw new Error( "invalid target" );
+			return source === target;
+
+		}catch( error ){
+			return false;
+		}
 	}
 
 	source = loosen( source );

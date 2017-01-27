@@ -733,6 +733,13 @@ cemento@^0.6.0:
     babel-runtime "^6.22.0"
     harden "^0.13.0"
 
+cemento@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/cemento/-/cemento-0.7.0.tgz#40ba7744dc1a85020f18e64270b2f2dcc0651e2e"
+  dependencies:
+    babel-runtime "^6.22.0"
+    harden "^0.14.0"
+
 center-align@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/center-align/-/center-align-0.1.3.tgz#aa0d32629b6ee972200411cbd4461c907bc2b7ad"
@@ -1214,6 +1221,12 @@ harden@^0.13.0:
   resolved "https://registry.yarnpkg.com/harden/-/harden-0.13.0.tgz#179120a4782cb29e24ab3fd4ffc93616e4fd6912"
   dependencies:
     babel-runtime "^6.20.0"
+
+harden@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/harden/-/harden-0.14.0.tgz#bd9b003c413a80523f60fc0becd2b6e4bd0e3b96"
+  dependencies:
+    babel-runtime "^6.22.0"
 
 has-ansi@^2.0.0:
   version "2.0.0"
@@ -1801,6 +1814,14 @@ process-nextick-args@~1.0.6:
 process@^0.11.0:
   version "0.11.9"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.9.tgz#7bd5ad21aa6253e7da8682264f1e11d11c0318c1"
+
+protype@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/protype/-/protype-0.11.0.tgz#52b1a68d774d83bc4a9c0671d5e392b246fb4a3d"
+  dependencies:
+    babel-runtime "^6.22.0"
+    cemento "^0.7.0"
+    harden "^0.14.0"
 
 protype@^0.7.0:
   version "0.7.0"
