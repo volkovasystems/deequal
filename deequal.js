@@ -32,6 +32,9 @@
 			"file": "deequal.js",
 			"module": "deequal",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/deequal.git",
 			"global": true,
@@ -47,7 +50,8 @@
 		{
 			"kount": "kount",
 			"loosen": "loosen",
-			"protype": "protype"
+			"protype": "protype",
+			"stringe": "stringe",
 		}
 	@end-include
 */
@@ -55,6 +59,7 @@
 const kount = require( "kount" );
 const loosen = require( "loosen" );
 const protype = require( "protype" );
+const stringe = require( "stringe" );
 
 const deequal = function deequal( source, target ){
 	/*;
@@ -75,7 +80,7 @@ const deequal = function deequal( source, target ){
 	if( !protype( source, OBJECT ) || !protype( target, OBJECT ) ){
 		try{
 			if( protype( source, FUNCTION ) && protype( target, FUNCTION ) ){
-				return source === target || source.toString( ) == target.toString( );
+				return source === target || stringe( source ) == stringe( target );
 			}
 
 			return source === target;
