@@ -1,12 +1,12 @@
 {
   "name": "deequal",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Deep equal.",
-  "main": "deequal.js",
+  "main": "deequal.deploy.js",
   "support": "deequal.support.js",
-  "deploy": "deequal.deploy.js",
   "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -23,8 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "kount": "^0.5.0",
-    "loosen": "^0.4.0",
-    "protype": "^0.11.0"
+    "kount": "^0.10.0",
+    "loosen": "^0.13.0",
+    "protype": "^0.21.0",
+    "stringe": "^0.2.0"
   }
 }

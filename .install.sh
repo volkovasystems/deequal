@@ -3,6 +3,7 @@ babel-runtime \
 kount \
 loosen \
 protype \
+stringe \
 --save && \
 yarn add \
 babel-cli \
@@ -16,4 +17,6 @@ bower install \
 kount \
 loosen \
 protype \
---save
+stringe \
+--save \
+--force-latest
