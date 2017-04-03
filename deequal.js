@@ -65,14 +65,8 @@ const deequal = function deequal( source, target ){
 	/*;
 		@meta-configuration:
 			{
-				"source:required": [
-					"object",
-					Array
-				],
-				"target:required": [
-					"object",
-					Array
-				]
+				"source:required": "*",
+				"target:required": "*"
 			}
 		@end-meta-configuration
 	*/
@@ -90,18 +84,17 @@ const deequal = function deequal( source, target ){
 		}
 	}
 
-	source = loosen( source );
-	for( let property in source ){
-		if( protype( source[ property ], OBJECT ) ){
-			delete source[ property ];
-		}
-	}
+	source = loosen( source, true );
 
-	target = loosen( target );
-	for( let property in target ){
-		if( protype( target[ property ], OBJECT ) ){
-			delete target[ property ];
-		}
+	target = loosen( target, true );
+
+	/*;
+		@note:
+			Checks for key count equality.
+		@end-note
+	*/
+	if( kount( source ) != kount( target ) ){
+		return false;
 	}
 
 	/*;
@@ -110,17 +103,16 @@ const deequal = function deequal( source, target ){
 		@end-note
 	*/
 	for( let property in source ){
+		if( !( property in target ) ){
+			return false;
+		}
+
 		if( source[ property ] !== target[ property ] ){
 			return false;
 		}
 	}
 
-	/*;
-		@note:
-			Checks for key count equality.
-		@end-note
-	*/
-	return kount( source ) === kount( target );
+	return true;
 };
 
 module.exports = deequal;

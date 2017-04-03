@@ -1,6 +1,6 @@
 {
   "name": "deequal",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Deep equal.",
   "main": "deequal.js",
   "support": "deequal.support.js",
@@ -31,7 +31,7 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "kount": "^0.10.0",
-    "loosen": "^0.13.0",
+    "loosen": "^0.14.0",
     "protype": "^0.21.0",
     "stringe": "^0.2.0"
   },

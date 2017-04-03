@@ -147,8 +147,8 @@ async@^1.4.0:
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
 async@^2.1.2:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.2.0.tgz#c324eba010a237e4fbd55a12dee86367d5c0ef32"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.3.0.tgz#1013d1051047dd320fe24e494d5c66ecaf6147d9"
   dependencies:
     lodash "^4.14.0"
 
@@ -1490,14 +1490,12 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-impel@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/impel/-/impel-0.9.0.tgz#a3a458d1732a94d47a06438a608a182935f8981a"
+impel@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/impel/-/impel-0.11.0.tgz#d58eaab51f45468dd496cb278e3eff21b1c5a4d7"
   dependencies:
-    asea "^0.13.0"
     babel-runtime "^6.23.0"
     falzy "^0.17.0"
-    kein "^0.16.0"
     protype "^0.21.0"
     zelf "^0.11.0"
 
@@ -1797,9 +1795,9 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0"
 
-loosen@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/loosen/-/loosen-0.13.0.tgz#9a74b6fd434ac7e1c6c75b7624e1cde5fc02ec85"
+loosen@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/loosen/-/loosen-0.14.0.tgz#27cdf9a00ca14f4186e1a73848693aa108c1f7c7"
   dependencies:
     arkount "^0.5.0"
     babel-runtime "^6.23.0"
@@ -1807,7 +1805,7 @@ loosen@^0.13.0:
     depher "^0.23.0"
     doubt "^0.24.0"
     harden "^0.21.0"
-    impel "^0.9.0"
+    impel "^0.11.0"
     karv "^0.3.0"
     kein "^0.16.0"
     kount "^0.10.0"
@@ -2759,8 +2757,8 @@ u200b@^0.19.0:
     wichevr "^0.7.0"
 
 uglify-js@^2.6, uglify-js@^2.8.5:
-  version "2.8.19"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.19.tgz#21dcb82101aa87054deb140aa9b6bccda5389c8e"
+  version "2.8.21"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.21.tgz#1733f669ae6f82fc90c7b25ec0f5c783ee375314"
   dependencies:
     source-map "~0.5.1"
     yargs "~3.10.0"
@@ -2801,8 +2799,8 @@ uuid@^3.0.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
 v8flags@^2.0.10:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-2.0.11.tgz#bca8f30f0d6d60612cc2c00641e6962d42ae6881"
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-2.0.12.tgz#73235d9f7176f8e8833fb286795445f7938d84e5"
   dependencies:
     user-home "^1.1.1"
 

@@ -22,5 +22,12 @@ console.log( deequal( {
 		"weee": false
 	}
 } ) );
+console.log( Date.now( ) - time );
+
+time = Date.now( );
 console.log( deequal( undefined, null ) );
+console.log( Date.now( ) - time );
+
+time = Date.now( );
+console.log( deequal( { }, { } ) );
 console.log( Date.now( ) - time );

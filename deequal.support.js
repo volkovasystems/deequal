@@ -65,14 +65,8 @@ var deequal = function deequal(source, target) {
 	/*;
                                                 	@meta-configuration:
                                                 		{
-                                                			"source:required": [
-                                                				"object",
-                                                				Array
-                                                			],
-                                                			"target:required": [
-                                                				"object",
-                                                				Array
-                                                			]
+                                                			"source:required": "*",
+                                                			"target:required": "*"
                                                 		}
                                                 	@end-meta-configuration
                                                 */
@@ -90,18 +84,17 @@ var deequal = function deequal(source, target) {
 		}
 	}
 
-	source = loosen(source);
-	for (var property in source) {
-		if (protype(source[property], OBJECT)) {
-			delete source[property];
-		}
-	}
+	source = loosen(source, true);
 
-	target = loosen(target);
-	for (var _property in target) {
-		if (protype(target[_property], OBJECT)) {
-			delete target[_property];
-		}
+	target = loosen(target, true);
+
+	/*;
+                                	@note:
+                                		Checks for key count equality.
+                                	@end-note
+                                */
+	if (kount(source) != kount(target)) {
+		return false;
 	}
 
 	/*;
@@ -109,18 +102,17 @@ var deequal = function deequal(source, target) {
    		Checks for value equality.
    	@end-note
    */
-	for (var _property2 in source) {
-		if (source[_property2] !== target[_property2]) {
+	for (var property in source) {
+		if (!(property in target)) {
+			return false;
+		}
+
+		if (source[property] !== target[property]) {
 			return false;
 		}
 	}
 
-	/*;
-   	@note:
-   		Checks for key count equality.
-   	@end-note
-   */
-	return kount(source) === kount(target);
+	return true;
 };
 
 module.exports = deequal;
