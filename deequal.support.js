@@ -44,22 +44,24 @@
               
               	@module-documentation:
               		Deep equal.
+              
+              		If the source and target is not object, it will do a shallow comparison.
               	@end-module-documentation
               
               	@include:
               		{
+              			"eqe": "eqe",
               			"kount": "kount",
               			"loosen": "loosen",
-              			"protype": "protype",
-              			"stringe": "stringe",
+              			"protype": "protype"
               		}
               	@end-include
               */
 
+var eqe = require("eqe");
 var kount = require("kount");
 var loosen = require("loosen");
 var protype = require("protype");
-var stringe = require("stringe");
 
 var deequal = function deequal(source, target) {
 	/*;
@@ -72,16 +74,7 @@ var deequal = function deequal(source, target) {
                                                 */
 
 	if (!protype(source, OBJECT) || !protype(target, OBJECT)) {
-		try {
-			if (protype(source, FUNCTION) && protype(target, FUNCTION)) {
-				return source === target || stringe(source) == stringe(target);
-			}
-
-			return source === target;
-
-		} catch (error) {
-			return false;
-		}
+		return eqe(source, target);
 	}
 
 	source = loosen(source, true);

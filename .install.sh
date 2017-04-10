@@ -1,9 +1,9 @@
 yarn add \
 babel-runtime \
+eqe \
 kount \
 loosen \
 protype \
-stringe \
 --save && \
 yarn add \
 babel-cli \
@@ -14,9 +14,9 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
+eqe \
 kount \
 loosen \
 protype \
-stringe \
 --save \
 --force-latest
