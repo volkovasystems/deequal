@@ -1,6 +1,6 @@
 {
   "name": "deequal",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Deep equal.",
   "main": "deequal.deploy.js",
   "support": "deequal.support.js",
@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "eqe": "^0.1.0",
+    "eqe": "^0.2.0",
     "kount": "^0.10.0",
-    "loosen": "^0.17.0",
+    "loosen": "^0.18.0",
     "protype": "^0.21.0"
   }
 }
