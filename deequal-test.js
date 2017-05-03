@@ -1,7 +1,7 @@
+const assert = require( "assert" );
 const deequal = require( "./deequal.js" );
 
-let time = Date.now( );
-console.log( deequal( {
+assert.equal( deequal( {
 	"hello": {
 		"world": {
 			"yeah": "hi"
@@ -21,13 +21,9 @@ console.log( deequal( {
 		],
 		"weee": false
 	}
-} ) );
-console.log( Date.now( ) - time );
+} ), true, "should be true" );
 
-time = Date.now( );
-console.log( deequal( undefined, null ) );
-console.log( Date.now( ) - time );
+assert.equal( deequal( undefined, null ), false, "should be false" );
+assert.equal( deequal( { }, { } ), true, "should be true" );
 
-time = Date.now( );
-console.log( deequal( { }, { } ) );
-console.log( Date.now( ) - time );
+console.log( "ok" );
