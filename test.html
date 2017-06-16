@@ -1,8 +1,49 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./deequal.deploy.js">
-		</script>
+		<title>deequal unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./deequal.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "deequal unit test", function( assert ) {
+
+				assert.equal( deequal( {
+					"hello": {
+						"world": {
+							"yeah": "hi"
+						},
+						"ugh": [
+							1,2,3
+						],
+						"weee": false
+					}
+				}, {
+					"hello": {
+						"world": {
+							"yeah": "hi"
+						},
+						"ugh": [
+							1,2,3
+						],
+						"weee": false
+					}
+				} ), true, "should be true" );
+
+				assert.equal( deequal( undefined, null ), false, "should be false" );
+				assert.equal( deequal( { }, { } ), true, "should be true" );
+
+			} );
+		</script>
+	</body>
 </html>
