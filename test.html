@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>deequal unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:deequal</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./deequal.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "deequal unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.equal( deequal( {
-					"hello": {
-						"world": {
-							"yeah": "hi"
-						},
-						"ugh": [
-							1,2,3
-						],
-						"weee": false
-					}
-				}, {
-					"hello": {
-						"world": {
-							"yeah": "hi"
-						},
-						"ugh": [
-							1,2,3
-						],
-						"weee": false
-					}
-				} ), true, "should be true" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.equal( deequal( undefined, null ), false, "should be false" );
-				
-				assert.equal( deequal( { }, { } ), true, "should be true" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>

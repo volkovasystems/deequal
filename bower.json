@@ -1,32 +1,26 @@
 {
-  "name": "deequal",
-  "version": "0.13.0",
-  "description": "Deep equal.",
-  "main": "deequal.deploy.js",
-  "support": "deequal.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "deep",
-    "equal",
-    "deequal"
-  ],
-  "homepage": "https://github.com/volkovasystems/deequal",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "eqe": "^0.3.0",
-    "kount": "^0.11.0",
-    "loosen": "^0.26.0",
-    "protype": "^0.22.0"
-  }
+	"name": "deequal",
+	"version": "0.13.0",
+	"description": "Deep equal.",
+	"main": "deequal.deploy.js",
+	"support": "deequal.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"deep",
+		"equal",
+		"deequal"
+	],
+	"homepage": "https://github.com/volkovasystems/deequal",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
