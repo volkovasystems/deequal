@@ -1,16 +1,60 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-12T02:33:20.237Z",
-    "end": "2017-09-12T02:33:20.237Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 4,
+		"tests": 3,
+		"passes": 3,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-13T10:02:57.921Z",
+		"end": "2017-09-13T10:02:57.945Z",
+		"duration": 24
+	},
+	"tests": [
+		{
+			"title": "should be equal to true",
+			"fullTitle": "deequal `deequal with object type source and object type target` should be equal to true",
+			"duration": 18,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "deequal `deequal( undefined, null )` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "deequal `deequal( { }, { } )` should be equal to true",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to true",
+			"fullTitle": "deequal `deequal with object type source and object type target` should be equal to true",
+			"duration": 18,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "deequal `deequal( undefined, null )` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "deequal `deequal( { }, { } )` should be equal to true",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

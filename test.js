@@ -45,13 +45,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"deequal": "deequal"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const deequal = require( "./deequal.js" );
@@ -63,11 +63,49 @@ const deequal = require( "./deequal.js" );
 
 
 //: @server:
-
 describe( "deequal", ( ) => {
 
-} );
+	describe( "`deequal with object type source and object type target`", ( ) => {
+		it( "should be equal to true", ( ) => {
 
+			assert.equal( deequal( {
+				"hello": {
+					"world": {
+						"yeah": "hi"
+					},
+					"ugh": [
+						1,2,3
+					],
+					"weee": false
+				}
+			}, {
+				"hello": {
+					"world": {
+						"yeah": "hi"
+					},
+					"ugh": [
+						1,2,3
+					],
+					"weee": false
+				}
+			} ), true );
+
+		} );
+	} );
+
+	describe( "`deequal( undefined, null )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( deequal( undefined, null ), false );
+		} );
+	} );
+
+	describe( "`deequal( { }, { } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( deequal( { }, { } ), true );
+		} );
+	} );
+
+} );
 //: @end-server
 
 

@@ -1,0 +1,148 @@
+{
+	"state": {
+		"passed": 3,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-13T10:02:59.048Z",
+	"end": "2017-09-13T10:03:32.995Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "deequal",
+			"duration": 0,
+			"start": "2017-09-13T10:03:32.554Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "deequal",
+			"duration": 265,
+			"start": "2017-09-13T10:03:32.555Z",
+			"end": "2017-09-13T10:03:32.820Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-13T10:03:32.556Z",
+					"end": "2017-09-13T10:03:32.557Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "deequal",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-09-13T10:03:32.713Z",
+					"end": "2017-09-13T10:03:32.713Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "deequal",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-09-13T10:03:32.715Z",
+					"end": "2017-09-13T10:03:32.715Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "deequal",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-09-13T10:03:32.765Z",
+					"end": "2017-09-13T10:03:32.766Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "deequal",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-09-13T10:03:32.766Z",
+					"end": "2017-09-13T10:03:32.767Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "deequal",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-09-13T10:03:32.819Z",
+					"end": "2017-09-13T10:03:32.819Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "deequal",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-09-13T10:03:32.820Z",
+					"end": "2017-09-13T10:03:32.820Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "deequal"
+				}
+			]
+		},
+		{
+			"name": "`deequal with object type source and object type target`",
+			"duration": 159,
+			"start": "2017-09-13T10:03:32.555Z",
+			"end": "2017-09-13T10:03:32.714Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-09-13T10:03:32.556Z",
+					"end": "2017-09-13T10:03:32.712Z",
+					"duration": 156,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`deequal( undefined, null )`",
+			"duration": 52,
+			"start": "2017-09-13T10:03:32.714Z",
+			"end": "2017-09-13T10:03:32.766Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-09-13T10:03:32.714Z",
+					"end": "2017-09-13T10:03:32.765Z",
+					"duration": 51,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`deequal( { }, { } )`",
+			"duration": 54,
+			"start": "2017-09-13T10:03:32.766Z",
+			"end": "2017-09-13T10:03:32.820Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-09-13T10:03:32.766Z",
+					"end": "2017-09-13T10:03:32.819Z",
+					"duration": 53,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
