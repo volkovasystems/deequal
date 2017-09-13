@@ -45,13 +45,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"deequal": "deequal"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const deequal = require( "./deequal.js" );
@@ -67,27 +67,167 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "deequal", ( ) => {
 
-} );
+	describe( "`deequal with object type source and object type target`", ( ) => {
+		it( "should be equal to true", ( ) => {
 
+			assert.equal( deequal( {
+				"hello": {
+					"world": {
+						"yeah": "hi"
+					},
+					"ugh": [
+						1,2,3
+					],
+					"weee": false
+				}
+			}, {
+				"hello": {
+					"world": {
+						"yeah": "hi"
+					},
+					"ugh": [
+						1,2,3
+					],
+					"weee": false
+				}
+			} ), true );
+
+		} );
+	} );
+
+	describe( "`deequal( undefined, null )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( deequal( undefined, null ), false );
+		} );
+	} );
+
+	describe( "`deequal( { }, { } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( deequal( { }, { } ), true );
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "deequal", ( ) => {
 
-} );
+	describe( "`deequal with object type source and object type target`", ( ) => {
+		it( "should be equal to true", ( ) => {
 
+			assert.equal( deequal( {
+				"hello": {
+					"world": {
+						"yeah": "hi"
+					},
+					"ugh": [
+						1,2,3
+					],
+					"weee": false
+				}
+			}, {
+				"hello": {
+					"world": {
+						"yeah": "hi"
+					},
+					"ugh": [
+						1,2,3
+					],
+					"weee": false
+				}
+			} ), true );
+
+		} );
+	} );
+
+	describe( "`deequal( undefined, null )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			assert.equal( deequal( undefined, null ), false );
+		} );
+	} );
+
+	describe( "`deequal( { }, { } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			assert.equal( deequal( { }, { } ), true );
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "deequal", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`deequal with object type source and object type target`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let test = deequal( {
+						"hello": {
+							"world": {
+								"yeah": "hi"
+							},
+							"ugh": [
+								1,2,3
+							],
+							"weee": false
+						}
+					}, {
+						"hello": {
+							"world": {
+								"yeah": "hi"
+							},
+							"ugh": [
+								1,2,3
+							],
+							"weee": false
+						}
+					} );
+
+					return test;
+				}
+
+			).value;
+
+			assert.equal( result, true );
+		} );
+	} );
+
+	describe( "`deequal( undefined, null )`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return deequal( undefined, null );
+				}
+
+			).value;
+
+			assert.equal( result, false );
+		} );
+	} );
+
+	describe( "`deequal( { }, { } )`", ( ) => {
+		it( "should be equal to true", ( ) => {
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return deequal( { }, { } );
+				}
+
+			).value;
+
+			assert.equal( result, true );
+		} );
+	} );
+
+} );
 //: @end-bridge
