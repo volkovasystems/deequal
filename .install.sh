@@ -3,7 +3,6 @@ babel-runtime \
 eqe \
 kount \
 loosen \
-protype \
 --save && \
 yarn add \
 babel-cli \
@@ -33,6 +32,5 @@ bower install \
 eqe \
 kount \
 loosen \
-protype \
 --save \
 --force-latest

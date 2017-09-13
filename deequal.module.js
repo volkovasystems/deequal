@@ -53,8 +53,7 @@
 		{
 			"eqe": "eqe",
 			"kount": "kount",
-			"loosen": "loosen",
-			"protype": "protype"
+			"loosen": "loosen"
 		}
 	@end-include
 */
@@ -62,7 +61,6 @@
 const eqe = require( "eqe" );
 const kount = require( "kount" );
 const loosen = require( "loosen" );
-const protype = require( "protype" );
 
 const deequal = function deequal( source, target ){
 	/*;
@@ -74,7 +72,7 @@ const deequal = function deequal( source, target ){
 		@end-meta-configuration
 	*/
 
-	if( !protype( source, OBJECT ) || !protype( target, OBJECT ) ){
+	if( typeof source != "object" || typeof target != "object" ){
 		return eqe( source, target );
 	}
 
